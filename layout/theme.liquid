@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>{{ shop.name }}</title>
+  {{ content_for_header }}
+  {{ 'base.css' | asset_url | stylesheet_tag }}
+</head>
+
+<body>
+  {% section 'header' %}
+  <main>
+    {{ content_for_layout }}
+  </main>
+  {% section 'footer' %}
+</body>
+</html>
